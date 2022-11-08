@@ -34,10 +34,8 @@ void *updateRPC(void *ptr)
             WindowAsset windowAsset = getWindowAsset(windowName);
             string cpupercent = to_string((long)cpu);
             string rampercent = to_string((long)mem);
-            string customArchImage = "kari-arch";
-            string customArchText = "Arch Linux";
 
-            setActivity(*state, string("CPU: " + cpupercent + "% | RAM: " + rampercent + "%"), "WM: " + wm, windowAsset.image, windowAsset.text, customArchImage, customArchText, startTime, discord::ActivityType::Playing);
+            setActivity(*state, string("CPU: " + cpupercent + "% | RAM: " + rampercent + "%"), "WM: " + wm, windowAsset.image, windowAsset.text, distroAsset.image, distroAsset.text, startTime, discord::ActivityType::Playing);
         }
     }
 }
