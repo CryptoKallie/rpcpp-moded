@@ -147,8 +147,9 @@ void setActivity(DiscordState &state, string details, string sstate, string smal
     discord::Activity activity{};
     activity.SetDetails(details.c_str());
     activity.SetState(sstate.c_str());
-    activity.GetAssets().SetSmallImage(smallimage.c_str());
-    activity.GetAssets().SetSmallText(smallimagetext.c_str());
+    //I'm removing these for now
+    //activity.GetAssets().SetSmallImage(smallimage.c_str());
+    //activity.GetAssets().SetSmallText(smallimagetext.c_str());
     activity.GetAssets().SetLargeImage(largeimage.c_str());
     activity.GetAssets().SetLargeText(largeimagetext.c_str());
     activity.GetTimestamps().SetStart(uptime);
