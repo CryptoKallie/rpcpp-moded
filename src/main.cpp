@@ -34,9 +34,10 @@ void *updateRPC(void *ptr)
             WindowAsset windowAsset = getWindowAsset(windowName);
             string cpupercent = to_string((long)cpu);
             string rampercent = to_string((long)mem);
-            string customArch = "kari-arch";
+            string customArchImage = "kari-arch";
+            string customArchText = "Arch Linux";
 
-            setActivity(*state, string("CPU: " + cpupercent + "% | RAM: " + rampercent + "%"), "WM: " + wm, windowAsset.image, windowAsset.text, customArch, distroAsset.text, startTime, discord::ActivityType::Playing);
+            setActivity(*state, string("CPU: " + cpupercent + "% | RAM: " + rampercent + "%"), "WM: " + wm, windowAsset.image, windowAsset.text, customArchImage, customArchText, startTime, discord::ActivityType::Playing);
         }
     }
 }
@@ -102,7 +103,7 @@ int main(int argc, char **argv)
     DiscordState state{};
 
     discord::Core *core{};
-    auto result = discord::Core::Create(934099338374824007, DiscordCreateFlags_Default, &core);
+    auto result = discord::Core::Create(1039556364726452234, DiscordCreateFlags_Default, &core);
     state.core.reset(core);
     if (!state.core)
     {
